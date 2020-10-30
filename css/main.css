@@ -36,6 +36,7 @@ body {
 }
 
 .footer {
+    margin-top: 20px;
     display: block;
     overflow: hidden;
     background-color: #333;
@@ -59,22 +60,22 @@ body {
 }
 
 /* Home */
-.homeImages img {
+#homeImages img {
     margin: 10px;
     height: 650px;
     max-width: 97%;
 }
 
-.shortIntro {
+#shortIntro {
     padding-left: 10px;
     margin-bottom: 50px;
 }
 
-.shortIntro p{
+#shortIntro p{
     font-size: 20px;
 }
 
-.boxSection {
+#boxSection {
     display: inline-block;
     width: 100%;
 }
@@ -109,5 +110,80 @@ body {
 .projectDescription {
     margin-left: 10px;
     padding-right: 10px;
-    text-align:left;
+    text-align:justify;
+}
+
+/* Gallery */
+.gallerySection {
+    display: inline-block;
+}
+
+div.galleryDiv {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    float: left;
+    width: 600px;
+    height: 300px;
+    box-shadow: 5px 10px 8px #888888;
+}
+
+div.galleryDiv img {
+    width: 100%;
+}
+
+  /* About */
+#bioSection {
+    margin-bottom: 20px;
+    display: inline-block;
+    width: 100%;
+}
+
+#bioImage {
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-right: 45px;
+    max-width: 100%;
+    height: auto;
+    float: left;
+}
+
+#bioDescription {
+    margin-left: 10px;
+    padding-right: 50px;
+    text-align:justify;
+}
+
+#bioUl, #bioOl {
+    list-style-position: inside;
+}
+
+#messageSection {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+#messageForm {
+    width: 500px;
+}
+
+.messageDiv {
+    margin-bottom: 10px;
+}
+
+.messageLabel {
+    width: 75px;
+    display: block;
+    float: left;
+}
+
+#name, #email {
+    width: 300px;
+}
+
+#messageArea {
+    resize: none;
 }

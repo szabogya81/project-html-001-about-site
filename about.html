@@ -19,10 +19,85 @@
         </nav>
 
         <main>
-            <section>
+            <section id="bioSection">
+                <img id="bioImage" src="/images/about.jpg" alt="Profil kép">
+                <span>
+                    <article id="bioDescription">
+                        <h2>Életem, tapasztalataim, hobbijaim</h2>
+                        <p>Kitalált Sándor néven láttam meg a világot 2020.10.30-án, pénteken.
+                            Gyermekkoromban mindig úgy képzeltem, hogy egyszer majd híres balett-táncos leszek. (azóta is a legnagyobb hobbim balett előadásokra járni, csak maszkban kényelmetlenebb)
+                            Sajnos kiderült idővel, hogy nincs hozzá elég tehetségem, és a fizikai adottságaim sem fogják ezt támogatni.
+                            Nem keseredtem azonban el. Alternatív lehetőségként akkoriban még a kukásautó vezetést, illetve a lottó főnyeremény megnyerését vízionáltam életpályaként.
+                            Telt-múlt az idő, sokan mondták, hogy ideje lenne más irányban is gondolkodnom.
+                            Elhatároztam hát, hogy szoftverfejlesztő leszek. Bele is vetettem magam a munkába. Első lépésben látnom kellett hozzá egy számítógépet.
+                            A tetris nem volt az, legalábbis nem abban az értelemben, ahogy gondoltam.
+                            Miután sikerült megismerkednem egy PC-vel, és minden ünnepi alkalomra hardvert, vagy programozói könyvet kértem, már ment minden sebesen.
+                            Számos technológiával, keretrendszerrel, programnyelvvel megismerkedtem, melyek közül a fontosabbak:                           
+                        </p>
+                        <ul id="bioUl">
+                            <li>.Net</li>
+                            <li>ASP.Net</li>
+                            <li>Entity Framework</li>
+                            <li>MVC</li>
+                        </ul>
 
+                        Megemlíteném még a végén - mert pont ide passzol - a kedvenc ételeimet is:
+                        <ol id="bioOl">
+                            <li>Tarhonyás narancs</li>
+                            <li>Kagylós puszedli</li>
+                            <li>Enyén prított pacal kókuszágyon</li>
+                        </ol>
+                    </article>
+                </span> 
             </section>
         </main>
+
+        <hr/>
+
+        <!-- <section class="messageSection">
+            <div>
+             <h3>Kedves látogató, ha szeretnél kapcsolatba lépni velem, az alábbi űrlap segítségével ezt is megteheted.</h3>  
+            </div>
+            <form id="messageForm" action="">
+                <div class="messageDiv">
+                    <label class="messageLabel" for="name">Név:</label>
+                    <input id="name" type="text" minlength="5">
+                </div>
+                <div class="messageDiv">
+                    <label class="messageLabel" for="email">Email:</label>
+                    <input id="email" type="email">
+                </div>
+                <div class="messageDiv">
+                    <label class="messageLabel" for="messageArea">Üzenet:</label>
+                    <textarea id="messageArea" name="w3review" rows="10" cols="100" minlength="20"></textarea>
+                </div>
+                <button class="messageSubmit" type="submit">Elküldöm az üzenetet</button>
+            </form>
+        </section> -->
+
+        <section id="messageSection">
+            <div>
+                <h3>Kedves látogató, ha szeretnél kapcsolatba lépni velem, az alábbi űrlap segítségével ezt is megteheted.</h3>  
+            </div>
+            <form id="messageForm" action="">
+                <fieldset>
+                    <legend>Üzenetküldés:</legend>
+                    <div class="messageDiv">
+                        <label class="messageLabel" for="name">Név:</label>
+                        <input id="name" type="text" minlength="5">
+                    </div>
+                    <div class="messageDiv">
+                        <label class="messageLabel" for="email">Email:</label>
+                        <input id="email" type="email">
+                    </div>
+                    <div class="messageDiv">
+                        <label class="messageLabel" for="messageArea">Üzenet:</label>
+                        <textarea id="messageArea" rows="10" cols="70" minlength="20"></textarea>
+                    </div>
+                    <button id="messageSubmit" type="submit">Elküldöm az üzenetet</button>
+                </fieldset>
+              </form>
+        </section>
 
         <footer class="footer">
             <a href="#header">Vissza az oldal elejére</a>
