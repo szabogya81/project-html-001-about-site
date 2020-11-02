@@ -40,8 +40,7 @@
                             <li>Entity Framework</li>
                             <li>MVC</li>
                         </ul>
-
-                        Megemlíteném még a végén - mert pont ide passzol - a kedvenc ételeimet is:
+                        <h4>Megemlíteném még a végén - mert pont ide passzol - a kedvenc ételeimet is:</h4>
                         <ol id="bioOl">
                             <li>Tarhonyás narancs</li>
                             <li>Kagylós puszedli</li>
@@ -54,45 +53,22 @@
 
         <hr/>
 
-        <!-- <section class="messageSection">
-            <div>
-             <h3>Kedves látogató, ha szeretnél kapcsolatba lépni velem, az alábbi űrlap segítségével ezt is megteheted.</h3>  
-            </div>
-            <form id="messageForm" action="">
-                <div class="messageDiv">
-                    <label class="messageLabel" for="name">Név:</label>
-                    <input id="name" type="text" minlength="5">
-                </div>
-                <div class="messageDiv">
-                    <label class="messageLabel" for="email">Email:</label>
-                    <input id="email" type="email">
-                </div>
-                <div class="messageDiv">
-                    <label class="messageLabel" for="messageArea">Üzenet:</label>
-                    <textarea id="messageArea" name="w3review" rows="10" cols="100" minlength="20"></textarea>
-                </div>
-                <button class="messageSubmit" type="submit">Elküldöm az üzenetet</button>
-            </form>
-        </section> -->
-
         <section id="messageSection">
-            <div>
-                <h3>Kedves látogató, ha szeretnél kapcsolatba lépni velem, az alábbi űrlap segítségével ezt is megteheted.</h3>  
-            </div>
-            <form id="messageForm" action="">
+            <h3>Kedves látogató, ha szeretnél kapcsolatba lépni velem, az alábbi űrlap segítségével ezt is megteheted.</h3> 
+            <form id="messageForm" novalidate>
                 <fieldset>
                     <legend>Üzenetküldés:</legend>
                     <div class="messageDiv">
                         <label class="messageLabel" for="name">Név:</label>
-                        <input id="name" type="text" minlength="5">
+                        <input id="name" type="text" minlength="5" required>
                     </div>
                     <div class="messageDiv">
                         <label class="messageLabel" for="email">Email:</label>
-                        <input id="email" type="email">
+                        <input id="email" type="email" required>
                     </div>
                     <div class="messageDiv">
                         <label class="messageLabel" for="messageArea">Üzenet:</label>
-                        <textarea id="messageArea" rows="10" cols="70" minlength="20"></textarea>
+                        <textarea id="messageArea" rows="10" cols="70" minlength="20" required></textarea>
                     </div>
                     <button id="messageSubmit" type="submit">Elküldöm az üzenetet</button>
                 </fieldset>
@@ -103,5 +79,34 @@
             <a href="#header">Vissza az oldal elejére</a>
             <span>Az oldal tartalma kitaláció, nem tartalmaz a való életből vett példákat.</span>
         </footer>
+
+        <script>
+            document.getElementById("messageForm").addEventListener('submit', (ev) => {
+                
+                const nameInput = document.getElementById('name');
+                const emailInput = document.getElementById('email');
+                const messageInput = document.getElementById('messageArea');
+                let alertMessages = "";
+
+                if(parseInt(nameInput.getAttribute('minlength')) > nameInput['value'].length) {
+                   alertMessages = alertMessages.concat("A névnek legalább 5 karakter hosszúnak kell lennie. \n");
+                }
+                if(!basicEmailValidation(emailInput['value'])) {
+                    alertMessages = alertMessages.concat("Hibás az e-mail cím. \n");
+                }
+                if(parseInt(messageInput.getAttribute('minlength')) > messageInput['value'].length){
+                    alertMessages = alertMessages.concat("Az üzenetnek legalább 20 karakter hosszúnak kell lennie.");
+                }
+
+                if(alertMessages.length > 0) {
+                    alert(alertMessages);
+                    ev.preventDefault();
+                }
+            });
+
+            function basicEmailValidation (email) {
+                return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+            }
+        </script>
     </body>
 </html>
